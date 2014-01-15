@@ -4,6 +4,5 @@ class Activity < ActiveRecord::Base
   validates :activity_name, :uniqueness => {:scope => :vendor, 
   	:message => "Should not have the same combination of vendor and activity"}
 
-  #add belongs_	to availability and dependent destroy
-
+  has_many :availabilities, :dependent => :destroy
 end
