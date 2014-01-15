@@ -14,6 +14,11 @@ class AvailabilitiesController < ApplicationController
 		render :json => {:head => :ok}
 	end
 
+	def index
+		@availabilities = Availability.all
+		render :json => @availabilities
+	end
+
 	def search
 		start_date = params["start_date"]
 		end_date = params["end_date"]

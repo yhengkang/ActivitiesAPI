@@ -15,4 +15,10 @@ class BookingsController < ApplicationController
 		Booking.find(params[:id]).destroy
 		render :json => {:head => :ok}
 	end
+
+	def index
+		@bookings = Booking.all
+		render :json => @bookings
+	end
+	
 end
