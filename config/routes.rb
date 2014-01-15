@@ -5,4 +5,5 @@ PeekCodingChallenge::Application.routes.draw do
 
   resources :bookings, :only => [:create, :destroy]
 
+  get "availabilities/search", :to => "availabilities#search" 
 end
