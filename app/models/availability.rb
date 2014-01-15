@@ -4,5 +4,5 @@ class Availability < ActiveRecord::Base
   #needs custom validation for overlapping of times
  	#what if the same classes is offered by the same vendor, at overlapping times, by different instructors?
 
-
+ 	has_many :bookings, :dependent => :destroy
 end

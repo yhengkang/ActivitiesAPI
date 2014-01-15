@@ -6,7 +6,6 @@ class AvailabilitiesController < ApplicationController
 			render :json => @availability
 		else
 			render :json => @availability.errors.full_messages
-			p @availability.errors.full_messages
 		end
 	end
 
