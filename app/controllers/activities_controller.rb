@@ -10,7 +10,8 @@ class ActivitiesController < ApplicationController
 	end
 
 	def destroy
-
+		Activity.find(params[:id]).destroy
+		render :json => {:head => :ok}
 	end
 
 end

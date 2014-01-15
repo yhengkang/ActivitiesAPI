@@ -10,7 +10,8 @@ class AvailabilitiesController < ApplicationController
 	end
 
 	def destroy
-
+		Availability.find(params[:id]).destroy
+		render :json => {:head => :ok}
 	end
 
 end
