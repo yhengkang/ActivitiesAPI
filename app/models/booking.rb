@@ -3,8 +3,9 @@ class Booking < ActiveRecord::Base
   validates :availability_id, :guests, :presence => true
 
  	validate :availability_must_have_space
-
  	before_destroy :add_space_back
+
+ 	belongs_to :availability
 
  	def availability_must_have_space
  		availability = Availability.find(self.availability_id)
