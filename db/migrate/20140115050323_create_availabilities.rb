@@ -5,8 +5,10 @@ class CreateAvailabilities < ActiveRecord::Migration
     	t.date :date, :null => false
     	t.time :start_time, :null => false
     	t.time :end_time, :null => false
-    	# no need for free activites now do we?
+    	#depends on if there are free activites
     	t.float :price, :null => false
+    	#need validation for spaces > 0 
+    	t.integer :spaces, :null => false
 
       t.timestamps
     end

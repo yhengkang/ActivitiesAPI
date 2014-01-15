@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20140115050323) do
     t.time     "start_time",  :null => false
     t.time     "end_time",    :null => false
     t.float    "price",       :null => false
+    t.integer  "spaces",      :null => false
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
