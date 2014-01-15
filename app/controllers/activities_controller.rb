@@ -14,4 +14,9 @@ class ActivitiesController < ApplicationController
 		render :json => {:head => :ok}
 	end
 
+	def index
+		@activities = Activity.all
+		render :json => @activities
+	end
+
 end
