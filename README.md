@@ -83,12 +83,12 @@ response = RestClient.get(search_endpoint)
 For single day searches, just put  the target date as start date, and nil for end_date
 
 ### TESTS:
--There are two tests, model_specs.rb, and search_specs.rb, both of which are located in specs.
--Both tests rely on initial seed data, and can be run using rspec
--If there are problems with either, drop the database, remigrate and reseed, though it should work fine.
--Tests are verified by getting the list of models back and comparing it to a number, so it isn't exactly thorough
+- There are two tests, model_specs.rb, and search_specs.rb, both of which are located in specs.
+- Both tests rely on initial seed data, and can be run using rspec
+- If there are problems with either, drop the database, remigrate and reseed, though it should work fine.
+- Tests are verified by getting the list of models back and comparing it to a number, so it isn't exactly thorough
 
--send a 'get' request to any of the endpoints to get a list of the models
+- send a 'get' request to any of the endpoints to get a list of the models
 
 ### NOTES:
 - Issues
@@ -96,7 +96,7 @@ For single day searches, just put  the target date as start date, and nil for en
 	- multiple availabilities can be booked on the same time, for the same activity, but I don't know if I should enforce uniqueness due to multiple instructors offering the same event for the same vendor being a possibility
 	- tests could be better written
 
--Idea for implementation of 'recurring' classes/events
+- Idea for implementation of 'recurring' classes/events
 	- add a additional 'recurring' column to availability table
 	- have a day, say 'Monday' stored in the column
 	- booking will then have to accept a new parameter 'date'
